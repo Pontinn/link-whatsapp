@@ -3,6 +3,8 @@ import "intl-tel-input/build/css/intlTelInput.css";
 // Importação do Head do Next.js
 import Head from "next/head";
 
+import "../styles/global.css"; // Caminho atualizado para o arquivo CSS
+
 function App({ Component, pageProps }) {
   return (
     <>
