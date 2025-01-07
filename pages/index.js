@@ -51,11 +51,9 @@ function Home() {
     event.preventDefault();
     if (iti) {
       const fullNumber = iti.getNumber();
-      console.log(fullNumber);
-      console.log(messageRef.current.value);
-      whatsappLink = `https://api.whatsapp.com/send?phone=${fullNumber}&text=${messageRef.current.value}`;
-      console.log(whatsappLink);
-
+      //codifica a mensagem para ser enviada via URL
+      const encodedMessage = encodeURI(messageRef.current.value);
+      whatsappLink = `https://api.whatsapp.com/send?phone=${fullNumber}&text=${encodedMessage}`;
       router.push({
         pathname: "/link-gerado",
         query: { link: whatsappLink },
@@ -70,8 +68,11 @@ function Home() {
       </section>
       <section id="form" className="container">
         <div className="form-div">
+          <h3>
+            Preencha os campos abaixo e <br />
+            gere seu link personalizado!
+          </h3>
           <form onSubmit={handleSubmit}>
-            <label>Numero whatsapp</label>
             <input type="tel" id="phone" ref={inputRef} />
             <textarea
               id="message"
@@ -83,7 +84,34 @@ function Home() {
             </button>
           </form>
         </div>
-        <div className="form-text">teer</div>
+        <div className="form-text">
+          <ul>
+            <li className="listed-text">
+              <strong>Vantagens ao gerar seu link personalizado:</strong>
+            </li>
+            <li className="listed-text">
+              <strong>Facilidade e agilidade na comunicação:</strong> <br /> Com
+              um link direto para o WhatsApp, os usuários podem iniciar uma
+              conversa imediatamente, sem precisar salvar o número ou passar por
+              múltiplos passos. Isso melhora a experiência do cliente e torna a
+              comunicação mais rápida e fluida.
+            </li>
+            <li className="listed-text">
+              <strong>Melhoria no marketing e no atendimento:</strong> <br />{" "}
+              Empresas podem incluir o link em campanhas de marketing, e-mails,
+              redes sociais, ou até mesmo em cartões de visita. Isso facilita o
+              contato direto com potenciais clientes, agilizando o atendimento e
+              aumentando as chances de conversões.
+            </li>
+            <li className="listed-text">
+              <strong>Personalização e praticidade:</strong> <br /> O link
+              gerado pode ser personalizado, como por exemplo, com uma mensagem
+              inicial predefinida (ex: “Oi, estou interessado no seu produto”).
+              Isso otimiza a interação e garante que o usuário tenha uma
+              experiência mais objetiva desde o primeiro contato.
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
   );
