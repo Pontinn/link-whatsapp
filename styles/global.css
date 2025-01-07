@@ -18,6 +18,23 @@
   font-family: sora, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.blinking {
+  animation: blinkingText 1s infinite;
+}
+
+@keyframes blinkingText {
+
+  0%,
+  50% {
+    opacity: 0;
+  }
+
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+
 /* FOOTER */
 
 /* HOME */

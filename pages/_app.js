@@ -16,7 +16,9 @@ function App({ Component, pageProps }) {
         />
       </Head>
       <div className="header">
-        <h1>pontin.dev</h1>
+        <h1>
+          pontin.dev<span className="blinking">|</span>
+        </h1>
       </div>
       <Component {...pageProps} />
       <div className="footer">
