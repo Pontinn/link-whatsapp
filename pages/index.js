@@ -66,6 +66,7 @@ function Home() {
       <section id="home">
         <h1>GERADOR DE LINKS PARA WHATSAPP</h1>
       </section>
+      {/* FORM */}
       <section id="form" className="container">
         <div className="form-div">
           <h3>
@@ -82,8 +83,14 @@ function Home() {
             <button className="submit-button" type="submit">
               Gerar link
             </button>
+            <p className="form-alert">
+              <strong>Atenção:</strong> Este site não armazena nenhum dado
+              inserido nos campos acima. O link gerado é temporário e será
+              excluído após o uso.
+            </p>
           </form>
         </div>
+        {/* FORM TEXT */}
         <div className="form-text">
           <ul>
             <li className="listed-text">
@@ -112,6 +119,81 @@ function Home() {
             </li>
           </ul>
         </div>
+      </section>
+      {/* MESSAGE SUGGESTION */}
+      <section className="message-indication container-column">
+        <h1>
+          <strong>
+            Como iniciar uma mensagem no WhatsApp de forma eficaz?
+          </strong>
+        </h1>
+        <p className="text-align-center">
+          Uma saudação adequada é educada e objetiva, ajustando-se ao contexto
+          da conversa. Em situações profissionais, opte por um tom mais formal e
+          respeitoso. Já em interações pessoais, seja amigável e descontraído.
+          Mencionar o nome do destinatário demonstra cuidado e torna a
+          comunicação mais pessoal e receptiva.
+        </p>
+        <div className="example-display">
+          <div className="example-box">
+            <h3>Para atendimento profissional:</h3>
+            <p>"Olá! Gostaria de mais informações sobre os seus serviços."</p>
+            <p>
+              "Olá! Poderia me informar sobre as opções disponíveis para
+              [assunto]?"
+            </p>
+            <p>
+              "Boa tarde! Gostaria de agendar um horário para discutir
+              [assunto]."
+            </p>
+          </div>
+          <div className="example-box">
+            <h3>Para vendas ou suporte:</h3>
+            <p>
+              "Oi! Tenho interesse no produto/serviço e gostaria de saber mais
+              detalhes."
+            </p>
+            <p>
+              "Oi! Tenho uma dúvida sobre [produto/serviço]. Pode me ajudar?"
+            </p>
+            <p>
+              "Olá! Gostaria de saber o preço e as condições para
+              [produto/serviço]."
+            </p>
+          </div>
+          <div className="example-box">
+            <h3>Para contatos gerais:</h3>
+            <p>
+              "Olá! Estou entrando em contato através do seu WhatsApp. Podemos
+              conversar?"
+            </p>
+            <p>
+              "Oi! Encontrei seu número e gostaria de conversar sobre
+              [assunto]."
+            </p>
+            <p>
+              "Olá! Gostaria de falar com você sobre algo importante. Podemos
+              conversar?"
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* ADS */}
+      <section className="adsense container">
+        <ins
+          className="adsbygoogle"
+          style={{
+            display: "block",
+            width: "100%",
+            height: "100px",
+            backgroundColor: "#f2f2f2",
+          }}
+          data-ad-client="ca-pub-3374247426589530"
+          data-ad-slot="8359202329"
+          data-ad-format="auto"
+          data-adtest="on"
+          data-full-width-responsive="true"
+        ></ins>
       </section>
     </div>
   );
