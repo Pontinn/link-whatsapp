@@ -17,33 +17,11 @@ function Home() {
         loadUtils: () => import("intl-tel-input/build/js/utils"),
       });
     }
-    //Cria o elemento script
-    const script = document.createElement("script");
-    script.src =
-      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3374247426589530";
-    script.async = true;
-    script.crossOrigin = "anonymous";
-    document.body.appendChild(script);
-
-    //Executa quando o script carregar
-    script.onload = () => {
-      console.log("Adsbygoogle script loaded successfully.");
-      try {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error("Adsbygoogle error:", e);
-      }
-    };
-
-    script.onerror = () => {
-      console.error("Failed to load the Adsbygoogle script.");
-    };
 
     return () => {
       if (iti) {
         iti.destroy();
       }
-      document.body.removeChild(script);
     };
   }, []);
 
