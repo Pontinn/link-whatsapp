@@ -7,33 +7,33 @@ import { useEffect } from "react";
 import "../styles/global.css"; // Caminho atualizado para o arquivo CSS
 
 function App({ Component, pageProps }) {
-  useEffect(() => {
-    //Cria o elemento script
-    const script = document.createElement("script");
-    script.src =
-      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3374247426589530";
-    script.async = true;
-    script.crossOrigin = "anonymous";
-    document.body.appendChild(script);
+  // useEffect(() => {
+  //   //Cria o elemento script
+  //   const script = document.createElement("script");
+  //   script.src =
+  //     "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3374247426589530";
+  //   script.async = true;
+  //   script.crossOrigin = "anonymous";
+  //   document.body.appendChild(script);
 
-    //Executa quando o script carregar
-    script.onload = () => {
-      console.log("Adsbygoogle script loaded successfully.");
-      try {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) {
-        console.error("Adsbygoogle error:", e);
-      }
-    };
+  //   //Executa quando o script carregar
+  //   script.onload = () => {
+  //     console.log("Adsbygoogle script loaded successfully.");
+  //     try {
+  //       (adsbygoogle = window.adsbygoogle || []).push({});
+  //     } catch (e) {
+  //       console.error("Adsbygoogle error:", e);
+  //     }
+  //   };
 
-    script.onerror = () => {
-      console.error("Failed to load the Adsbygoogle script.");
-    };
+  //   script.onerror = () => {
+  //     console.error("Failed to load the Adsbygoogle script.");
+  //   };
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
 
   return (
     <div id="app">
@@ -57,7 +57,7 @@ function App({ Component, pageProps }) {
         </div>
         <div
           className="copyright text-align-center"
-          style={{ paddingBottom: "5px" }}
+          style={{ paddingBottom: "15px" }}
         >
           <p>
             © 2025 Gerador de Links para WhatsApp. Todos os direitos reservados.
