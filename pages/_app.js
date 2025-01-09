@@ -45,9 +45,9 @@ function App({ Component, pageProps }) {
         />
       </Head>
       <section className="header">
-        <h1>
+        <a href="/" className="logo">
           pontin.dev<span className="blinking">|</span>
-        </h1>
+        </a>
       </section>
       <Component {...pageProps} />
       <section className="footer">
@@ -55,7 +55,10 @@ function App({ Component, pageProps }) {
           <a href="/termos-de-uso">Termos de Uso</a>
           <a href="/politica-de-privacidade">Política de Privacidade</a>
         </div>
-        <div className="copyright" style={{ paddingBottom: "5px" }}>
+        <div
+          className="copyright text-align-center"
+          style={{ paddingBottom: "5px" }}
+        >
           <p>
             © 2025 Gerador de Links para WhatsApp. Todos os direitos reservados.
             Desenvolvido por pontin.dev.

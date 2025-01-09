@@ -29,8 +29,8 @@ const LinkGerado = () => {
         <h1>LINK GERADO COM SUCESSO!</h1>
       </section>
 
-      <div className="container container-column">
-        <h2>Copie e compartilhe seu link personalizado</h2>
+      <div className="container container-column container-link">
+        <h2>Copie e compartilhe seu link personalizado!</h2>
         <input
           type="text"
           className="generated-link"
@@ -47,7 +47,7 @@ const LinkGerado = () => {
           style={{
             display: "block",
             width: "100%",
-            height: "100px",
+            height: "280px",
             backgroundColor: "#f2f2f2",
           }}
           data-ad-client="ca-pub-3374247426589530"
