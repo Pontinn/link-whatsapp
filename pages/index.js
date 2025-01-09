@@ -164,10 +164,12 @@ function Home() {
             display: "block",
             width: "100%",
             height: "100px",
+            backgroundColor: "#f2f2f2",
           }}
           data-ad-client="ca-pub-3374247426589530"
           data-ad-slot="8359202329"
           data-ad-format="auto"
+          data-adtest="on"
           data-full-width-responsive="true"
         ></ins>
       </section>
